@@ -1,0 +1,117 @@
+:root {
+
+    --bImgMobile: url("/images/bg-intro-mobile.png");
+    --bImgDesktop: url("/images/bg-intro-desktop.png");
+
+/* Colors */
+    --primary-color-red: hsl(0, 100%, 74%);
+    --primary-color-green: hsl(154, 59%, 51%);
+    --secondary-color-blue: hsl(248, 32%, 49%);
+    --secondary-color-dark-blue: hsl(249, 10%, 26%);
+    --secondary-color-grayish: hsl(246, 25%, 77%);
+
+    --primary-font: "poppins"
+
+}
+
+* {
+    
+    margin: 0;
+    padding: 0;
+}
+
+/* HTML TAGS */
+
+body {
+
+    background-image: var(--bImgMobile);
+    background-color: var(--primary-color-red);
+    font-family: var(--primary-font);
+    font-size: small;
+}
+
+footer {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    min-height: 5dvh;
+}
+
+main {
+
+    text-align: center;
+}
+
+/* CSS CLASSES */
+
+.blue-bubble {
+
+    margin: 1rem;
+    background-color: var(--secondary-color-blue);
+    border-radius: 0.5rem;
+}
+
+.form-primary {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.form-wrapper {
+
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    padding:1rem;
+}
+
+.form-input {
+
+    border-radius: .5rem;
+    border: 1px solid var(--secondary-color-grayish);
+    font-weight: 700;
+    padding: 1rem;
+    margin:0.5rem;
+}
+
+.form-button {
+
+    background-color: var(--primary-color-green);
+    color: white;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    border-style: none;
+    font-weight: 100;
+    height: 3rem;
+}
+
+.heading{
+
+    padding:1rem;
+    color: white;
+
+
+}
+
+.heading-text {
+
+    font-weight: 700;
+}
+
+.terms {
+
+    color: var(--primary-color-red);
+    font-weight: 700;
+}
+
+.txt-terms {
+
+    margin: 1rem;
+    line-height: 1rem;
+    color: var(--secondary-color-grayish);
+    font-size: x-small;
+}
