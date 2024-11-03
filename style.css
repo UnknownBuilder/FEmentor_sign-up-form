@@ -35,13 +35,18 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end;
-    min-height: 5dvh;
+    justify-content: flex-end;
+    height: 5dvh;
 }
 
 main {
 
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 95dvh;
+    overflow: scroll;
 }
 
 /* CSS CLASSES */
@@ -89,12 +94,10 @@ main {
     height: 3rem;
 }
 
-.heading{
+.heading-color{
 
     padding:1rem;
     color: white;
-
-
 }
 
 .heading-text {
@@ -114,4 +117,8 @@ main {
     line-height: 1rem;
     color: var(--secondary-color-grayish);
     font-size: x-small;
+}
+
+@media screen {
+    
 }
