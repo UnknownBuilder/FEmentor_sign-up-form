@@ -97,6 +97,11 @@ main {
     height: 3rem;
 }
 
+.form-button:hover {
+
+    filter:brightness(115%);
+}
+
 .heading-color{
 
     margin:2px;
@@ -113,6 +118,7 @@ main {
 
     color: var(--primary-color-red);
     font-weight: 700;
+    text-decoration: none;
 }
 
 .txt-terms {
