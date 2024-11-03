@@ -125,6 +125,11 @@ main {
 
 @media screen and (min-width: 670px) {
 
+    body {
+
+        background-image: var(--bImgDesktop);
+    }
+    
     main {
 
 
