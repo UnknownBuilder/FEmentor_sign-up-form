@@ -47,7 +47,6 @@ main {
     justify-content: center;
     text-align: center;
     height: 90dvh;
-    overflow: scroll;
 }
 
 /* CSS CLASSES */
