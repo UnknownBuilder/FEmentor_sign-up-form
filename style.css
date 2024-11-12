@@ -60,6 +60,18 @@ main {
     color: white;
 }
 
+.ferror {
+
+    color: var(--primary-color-red);
+    text-align: end;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: small;
+    font-style: italic;
+    display: none;
+
+}
+
 .form-primary {
 
     display: flex;
@@ -94,6 +106,7 @@ main {
     border-style: none;
     font-weight: 100;
     height: 3rem;
+    margin: 0.5rem;
 }
 
 .form-button:hover {

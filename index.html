@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Intro component with sign up form</title>
+  <script defer src="script.js"></script>
 </head>
 <body>
     <main>
@@ -31,16 +32,20 @@
           <span class="heading-text">Try it free 7 days</span> then $20/mo. thereafter
         </div>
         <div class="form-wrapper">
-          <form class="form-primary">
-            <input class="form-input"type="text" placeholder="First Name" name="firstName" id="frmName" autocomplete="given-name" required/>
-             <div id="fname"></div>
-            <input class="form-input"type="text" placeholder="Last Name" name="lastName" id="frmLastName" autocomplete="family-name" required/>
-              <div id="lname"></div>
-            <input class="form-input"type="email" placeholder="Email Address" name="Email" id="frmEmail" autocomplete="email" required/>
-              <div id="email"></div>
-            <input class="form-input"type="password" placeholder="Password" name="Password" id="frmPass" autocomplete="off" required/>
-              <div id="password"></div>
-            <input class="form-button"type="submit" value="Claim your free trial" name="btnSubmit" id="btnSubmit"/>
+          <form id="myform" class="form-primary">
+            <input class="form-input"type="text" placeholder="First Name" name="firstName" id="frmName" autocomplete="given-name" />
+             <div class="ferror" id="fname">hello world</div>
+
+            <input class="form-input"type="text" placeholder="Last Name" name="lastName" id="frmLastName" autocomplete="family-name" />
+              <div class="ferror" id="lname">hello world</div>
+
+            <input class="form-input"type="email" placeholder="Email Address" name="Email" id="frmEmail" autocomplete="email" />
+              <div class="ferror" id="email">hello world</div>
+
+            <input class="form-input"type="password" placeholder="Password" name="Password" id="frmPass" autocomplete="off"/>
+              <div class="ferror" id="password">hello world</div>
+
+            <input class="form-button" type="submit" value="Claim your free trial" name="btnSubmit" id="btnSubmit"/>
           </form>
 
           <p class="txt-terms">
@@ -56,6 +61,6 @@
         <p>Coded by <a target="_blank" href="https://github.com/unknownbuilder">Developing Hephaestus</a>.</p>
     </footer>
   <!-- Javascript  -->
-  <script src="script.js"></script>
+
 </body>
 </html>
