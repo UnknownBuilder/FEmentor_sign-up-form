@@ -72,6 +72,16 @@ main {
 
 }
 
+.ierror {
+
+    position:relative;
+    float:right;
+    bottom: 2.75rem;
+    right:1rem;
+    width: 1.5rem;
+    display: none;
+}
+
 .form-primary {
 
     display: flex;
