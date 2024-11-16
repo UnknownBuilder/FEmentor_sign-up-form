@@ -65,27 +65,32 @@ main {
     color: var(--primary-color-red);
     text-align: end;
     margin-right: 1rem;
-    margin-bottom: 0.5rem;
     font-size: small;
     font-style: italic;
-    display: none;
 
 }
 
 .ierror {
 
-    position:relative;
-    float:right;
-    bottom: 2.75rem;
-    right:1rem;
-    width: 1.5rem;
+    position:absolute;
+    right: 1.5rem;
+    padding-top:1.35rem;
     display: none;
+    
 }
 
 .form-primary {
 
     display: flex;
     flex-direction: column;
+}
+
+.form-cluster {
+
+display: flex;
+flex-direction: column;
+position:relative;
+    
 }
 
 .form-wrapper {

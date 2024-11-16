@@ -14,7 +14,7 @@
   <title>Frontend Mentor | Intro component with sign up form</title>
 
   <!-- Javascript  -->
-  <!-- <script defer src="script.js"></script> -->
+  <script defer src="script.js"></script>
 
 </head>
 <body>
@@ -36,21 +36,30 @@
         </div>
         <div class="form-wrapper">
           <form id="myform" class="form-primary">
-            <input class="form-input" type="text" placeholder="First Name" name="firstName" id="frmName" autocomplete="given-name" />
-            <div><img class = "ierror" id ="imgFirstName" src="images/icon-error.svg"></div>
-            <div class="ferror" id="fname">hello world</div>
+            
+            <div class="form-cluster">
+              <input class="form-input" type="text" placeholder="First Name" name="firstName" id="frmName" autocomplete="given-name" />
+              <img class = "ierror" id ="imgFirstName" src="images/icon-error.svg">
+              <div class="ferror" id="fname"></div>
+            </div>
 
-            <input class="form-input" type="text" placeholder="Last Name" name="lastName" id="frmLastName" autocomplete="family-name" />
-            <div><img class = "ierror" id ="imgLastName" src="images/icon-error.svg"></div>
-            <div class="ferror" id="lname">hello world</div>
+            <div class="form-cluster">
+              <input class="form-input" type="text" placeholder="Last Name" name="lastName" id="frmLastName" autocomplete="family-name" />
+              <img class = "ierror" id ="imgLastName" src="images/icon-error.svg">
+              <div class="ferror" id="lname"></div>
+            </div>
 
-            <input class="form-input" type="email" placeholder="Email Address" name="Email" id="frmEmail" autocomplete="email" />
-            <div><img class = "ierror" id ="imgEmail" src="images/icon-error.svg"></div>
-            <div class="ferror" id="email">hello world</div>
+            <div class="form-cluster">
+              <input class="form-input" type="text" placeholder="Email Address" name="Email" id="frmEmail" autocomplete="email" />
+              <img class = "ierror" id ="imgEmail" src="images/icon-error.svg">
+              <div class="ferror" id="email"></div>
+            </div>
 
-            <input class="form-input" type="password" placeholder="Password" name="Password" id="frmPass" autocomplete="off"/>
-            <div><img class = "ierror" id ="imgPassword" src="images/icon-error.svg"></div>
-            <div class="ferror" id="password">hello world</div>
+            <div class="form-cluster">
+              <input class="form-input" type="password" placeholder="Password" name="Password" id="frmPass" autocomplete="off"/>
+              <img class = "ierror" id ="imgPassword" src="images/icon-error.svg">
+              <div class="ferror" id="password"></div>
+            </div>
 
             <input class="form-button" type="submit" value="Claim your free trial" name="btnSubmit" id="btnSubmit"/>
           </form>

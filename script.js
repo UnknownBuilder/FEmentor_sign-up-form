@@ -1,106 +1,61 @@
-const frmName = document.getElementById("frmName");
-const frmLastName = document.getElementById("frmLastName");
-const frmEmail = document.getElementById("frmEmail");
-const frmPass = document.getElementById("frmPass");
-const form = document.querySelector("form");
+const form = document.getElementById("myform");
+const formCluster = document.getElementsByClassName("form-cluster");
+const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
+form.addEventListener("submit", event => {
 
-form.addEventListener("submit", event=> {
-
-   event.preventDefault();
-
-   validateInputs();
-
+    event.preventDefault();
+    runValidation();
 });
 
+function runValidation() {
 
-const validateInputs = () => {
+    let errorCount = 0;
 
-    console.log("made it to validation");
+    Array.from(formCluster).forEach( cluster => {
 
-    const nameValue = frmName.value.trim();
-    const lastnameValue = frmLastName.value.trim();
-    const emailValue = frmEmail.value.trim();
-    const passwordValue = frmPass.value.trim();
+        const inputForm = cluster.querySelector("input");
+        const errorImg = cluster.querySelector("img");
+        const errorText = cluster.querySelector("div");
 
-    if(nameValue === "") {
-        setError(frmName, "First Name cannot be empty");
+        if(inputForm.value == "") {
+
+            inputForm.style.border = "2px solid var(--primary-color-red)";
+            errorText.innerHTML = `${inputForm.placeholder} cannot be blank`;
+            errorImg.style.display = "inline";
+            errorCount += 1;
+        };
+
+        if(!re.test(inputForm.value) && inputForm.name == "Email") {
+
+            inputForm.style.border = "2px solid var(--primary-color-red)";
+            errorText.innerHTML = "Looks like this is not a valid email";
+            errorImg.style.display = "inline";
+            errorCount += 1;
+        };
+    });
+
+    if(errorCount == 0){
+
+        form.submit();
     }
-
-    if(lastnameValue === "") {
-        setError(frmLastName, "Last Name cannot be empty");
-    }
-
-    if(emailValue === "") {
-        setError(frmEmail, "Email cannot be empty");
-    }
-
-    if(passwordValue === "") {
-        setError(frmPass, "Password cannot be empty");
-    }
+    
+    errorCount = 0;
 };
 
+form.addEventListener("input", event => {
 
-const setError = (element, message) =>{
+    const elementTag = event.target
+    const validtyState = elementTag.validity.valid;
+    const elementArray = Array.from(elementTag.parentElement.children);
 
-    const textErrorFirstName = document.getElementById("fname");
-    const imgErrorFirstName = document.getElementById("imgFirstName");
+    if(validtyState == true){
 
-    const textErrorLastName = document.getElementById("lname");
-    const imgErrorLastName = document.getElementById("imgLastName");
-
-    const textErrorEmail = document.getElementById("email");
-    const imgErrorEmail = document.getElementById("imgEmail");
-
-    const textErrorPassword = document.getElementById("password");
-    const imgErrorPassword = document.getElementById("imgPassword");
-
-    if(element.name === "firstName"){
-
-        console.log(element.name);
-        console.log("made it to message");
-        textErrorFirstName.innerText = message;
-        textErrorFirstName.style.display ="inline"
-        imgErrorFirstName.style.display = "inline"
-        element.style.border= "2px solid var(--primary-color-red)"
-        element.placeholder = "";
-
-    }
-
-    if(element.name === "lastName"){
-
-        console.log(element.name);
-        console.log("made it to message");
-        textErrorLastName.innerText = message;
-        textErrorLastName.style.display ="inline"
-        imgErrorLastName.style.display = "inline"
-        element.style.border= "2px solid var(--primary-color-red)"
-        element.placeholder = "";
-    }
-
-    if(element.name === "Email"){
-
-        console.log(element.name);
-        console.log("made it to message");
-        textErrorEmail.innerText = message;
-        textErrorEmail.style.display ="inline"
-        imgErrorEmail.style.display = "inline"
-        element.style.border= "2px solid var(--primary-color-red)"
-        element.placeholder = "";
-    }
-
-    if(element.name === "Password"){
-
-        console.log(element.name);
-        console.log("made it to message");
-        textErrorPassword.innerText = message;
-        textErrorPassword.style.display ="inline"
-        imgErrorPassword.style.display = "inline"
-        element.style.border= "2px solid var(--primary-color-red)"
-        element.placeholder = "";
-    }
-
-}
+        elementArray[0].style.border = "1px solid var(--secondary-color-grayish)";
+        elementArray[1].style.display = "none";
+        elementArray[2].innerHTML = "";
+    };
+});
 
 
 
