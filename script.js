@@ -24,9 +24,7 @@ function runValidation() {
             errorText.innerHTML = `${inputForm.placeholder} cannot be blank`;
             errorImg.style.display = "inline";
             errorCount += 1;
-        };
-
-        if(!re.test(inputForm.value) && inputForm.name == "Email") {
+        } else if (!re.test(inputForm.value) && inputForm.name == "Email") {
 
             inputForm.style.border = "2px solid var(--primary-color-red)";
             errorText.innerHTML = "Looks like this is not a valid email";
