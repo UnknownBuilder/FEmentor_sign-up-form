@@ -31,7 +31,7 @@ Users should be able to:
 ### Screenshot
 
 Desktop
-![](desktop.jpg)
+![](/desktop.JPG)
 
 ### Links
 
@@ -49,7 +49,7 @@ Desktop
 
 ### What I learned
 
-I haven't uploaded an Front End Mentor solution in a while that I thought I would have forgotten almost everything I learned but it turned out that I understood the concepts so well that all I went online for was for syntax. It really reminded me of my work in Excel when I haven't used a particular feature in a while. I might not remember exactly how I got it accomplished but I knew it was possible and had doen it before. This made searching for the solution very simple. 
+I haven't uploaded an Front End Mentor solution in a while that I thought I would have forgotten almost everything I learned but it turned out that I understood the concepts so well that all I went online for was syntax. It really reminded me of my work in Excel when I haven't used a particular feature in a while. I might not remember exactly how I got it accomplished but I knew it was possible and had doen it before. This made searching for the solution very simple. 
 
 With this solution I started to leverage chatGPT to find answer to some of the problems I was running into. It was very helpful! I was finding solutions to items much faster than searching the web and since chatGPT explains what the thing does and why it was making the recommendation my understanding grew on the topics I asked it about. Big time saver. 
 
